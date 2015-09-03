@@ -8,6 +8,7 @@ It assumes that the user specified has the appropriate Zendesk permissions to ac
 Just sharing what I have been using and I hope it helps other folks get started.
 Disclaimer:  I am not a developer and this is my first Ruby program :)
 
+```
 # Sample configuration:
 #
 # [source,ruby]
@@ -51,7 +52,7 @@ Disclaimer:  I am not a developer and this is my first Ruby program :)
 #       }
 #     }
 # ----------------------------------
-
+```
 
 
 
