@@ -1,7 +1,7 @@
 # Logstash Zendesk Input Plugin
 
-# I am not a developer and this is my first Ruby program.
-# Just sharing what I have been using and I hope it helps other folks get started.
+I am not a developer and this is my first Ruby program.
+Just sharing what I have been using and I hope it helps other folks get started.
 
 -------------------
 TO EDIT LATER
