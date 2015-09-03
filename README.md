@@ -1,4 +1,4 @@
-# Logstash Zendesk Input Plugin
+# Logstash Input Plugin for Zendesk
 
 This input fetches data from Zendesk and generates Logstash events for indexing into Elasticsearch.
 It uses the official Zendesk ruby client api (https://github.com/zendesk/zendesk_api_client_rb).  
