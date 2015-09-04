@@ -31,11 +31,11 @@
             "properties": {
         "created_at":{
           "type": "date",
-          "format": "yyyy-MM-dd HH:mm:ss z||dateOptionalTime"
+          "format": "yyyy-MM-dd HH:mm:ss z||dateOptionalTime||yyyy-MM-dd HH:mm:ss Z"
         },
         "updated_at":{
           "type": "date",
-          "format": "yyyy-MM-dd HH:mm:ss z||dateOptionalTime"
+          "format": "yyyy-MM-dd HH:mm:ss z||dateOptionalTime||yyyy-MM-dd HH:mm:ss Z"
         },
                 "first_reply_time_in_minutes": {
                     "type": "integer",
