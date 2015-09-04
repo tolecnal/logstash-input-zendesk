@@ -45,8 +45,8 @@ Disclaimer:  I am not a developer and this is my first Ruby program :)
 #		   index => "zd_orgs"
 #		   # Referenced in plugin code. Do not change.
 #		   document_type => "%{type}"
-#		   # Referenced in plugin code. Do not change.
 #		   protocol => "http"
+#		   # Referenced in plugin code. Do not change.
 #		   document_id => "%{id}"
 #		   manage_template => false
 #		   template_name => zendesk_template
@@ -61,8 +61,8 @@ Disclaimer:  I am not a developer and this is my first Ruby program :)
 #		   index => "zd_users"
 #		   # Referenced in plugin code. Do not change.
 #		   document_type => "%{type}"
-#		   # Referenced in plugin code. Do not change.
 #		   protocol => "http"
+#		   # Referenced in plugin code. Do not change.
 #		   document_id => "%{id}"
 #		   manage_template => false
 #		   template_name => zendesk_template
@@ -77,8 +77,8 @@ Disclaimer:  I am not a developer and this is my first Ruby program :)
 #		   index => "zd_tickets"
 #		   # Referenced in plugin code. Do not change.
 #		   document_type => "%{type}"
-#		   # Referenced in plugin code. Do not change.
 #		   protocol => "http"
+#		   # Referenced in plugin code. Do not change.
 #		   document_id => "%{id}"
 #		   manage_template => false
 #		   template_name => zendesk_template
@@ -93,8 +93,8 @@ Disclaimer:  I am not a developer and this is my first Ruby program :)
 #		   index => "zd_comments"
 #		   # Referenced in plugin code. Do not change.
 #		   document_type => "%{type}"
-#		   # Referenced in plugin code. Do not change.
 #		   protocol => "http"
+#		   # Referenced in plugin code. Do not change.
 #		   document_id => "%{id}"
 #		   manage_template => false
 #		   template_name => zendesk_template
@@ -109,8 +109,8 @@ Disclaimer:  I am not a developer and this is my first Ruby program :)
 #		   index => "zd_topics"
 #		   # Referenced in plugin code. Do not change.
 #		   document_type => "%{type}"
-#		   # Referenced in plugin code. Do not change.
 #		   protocol => "http"
+#		   # Referenced in plugin code. Do not change.
 #		   document_id => "%{id}"
 #		   manage_template => false
 #		   template_name => zendesk_template
