@@ -10,114 +10,104 @@ Just sharing what I have been using and I hope it helps other folks get started.
 Disclaimer:  I am not a developer and this is my first Ruby program :)
 
 ```
-# Sample configuration:
-#
-# [source,ruby]
-# ----------------------------------
-#     input 
-#     { 
-#       zendesk
-#       {
-#         domain => "company.zendesk.com"
-#         # Specify either user and password or user and api_token for authentication
-#         user => "user@company.com"
-#         # password => "your_password"
-#         api_token => "your_api_token"
-#         organizations => true
-#         users => true
-#         tickets => true
-#         tickets_last_updated_n_days_ago => 1
-#         comments => false
-#         append_comments_to_tickets => false
-#		  topics = false
-#         sleep_between_runs => 30
-#       }
-#     }
-#
-#    output 
-#    {
-# 	   if [type] == "organization"
-# 	   {
-#	     elasticsearch
-#		 {
-#	       host => "localhost"
-#		   port => "9200"
-#		   index => "zd_orgs"
-#		   # Referenced in plugin code. Do not change.
-#		   document_type => "%{type}"
-#		   protocol => "http"
-#		   # Referenced in plugin code. Do not change.
-#		   document_id => "%{id}"
-#		   manage_template => false
-#		   template_name => zd_organizations
-#		 }
-#      }
-#       else if [type] == "user"
-#	   {
-#	     elasticsearch
-#		 {
-#		   host => "localhost"
-#		   port => "9200"
-#		   index => "zd_users"
-#		   # Referenced in plugin code. Do not change.
-#		   document_type => "%{type}"
-#		   protocol => "http"
-#		   # Referenced in plugin code. Do not change.
-#		   document_id => "%{id}"
-#		   manage_template => false
-#		   template_name => zd_users
-#		}	
-#	   } 
-#	   else if [type] == "ticket"
-#	   {	
-#	     elasticsearch
-#		 {
-#		   host => "localhost"
-#		   port => "9200"
-#		   index => "zd_tickets"
-#		   # Referenced in plugin code. Do not change.
-#		   document_type => "%{type}"
-#		   protocol => "http"
-#		   # Referenced in plugin code. Do not change.
-#		   document_id => "%{id}"
-#		   manage_template => false
-#		   template_name => zd_tickets
-#		}	
-#	   } 
-#	   else if [type] == "comment"
-#	   {
-#	     elasticsearch
-#		 {
-#	       host => "localhost"
-#		   port => "9200"
-#		   index => "zd_comments"
-#		   # Referenced in plugin code. Do not change.
-#		   document_type => "%{type}"
-#		   protocol => "http"
-#		   # Referenced in plugin code. Do not change.
-#		   document_id => "%{id}"
-#		   manage_template => false
-#		   template_name => zd_comments
-#		 }	
-#	   }
-#	   else if [type] == "topic"
-#	   {
-#	     elasticsearch
-#		 {
-#	       host => "localhost"
-#		   port => "9200"
-#		   index => "zd_topics"
-#		   # Referenced in plugin code. Do not change.
-#		   document_type => "%{type}"
-#		   protocol => "http"
-#		   # Referenced in plugin code. Do not change.
-#		   document_id => "%{id}"
-#		   manage_template => false
-#		   template_name => zd_topics
-#		 }	
-#	   }  
-#    }
-# ----------------------------------
+ Sample configuration:
+
+ [source,ruby]
+ ----------------------------------
+     input 
+     { 
+       zendesk
+       {
+         domain => "company.zendesk.com"
+         # Specify either user and password or user and api_token for authentication
+         user => "user@company.com"
+         # password => "your_password"
+         api_token => "your_api_token"
+         organizations => true
+         users => true
+         tickets => true
+         tickets_last_updated_n_days_ago => 1
+         comments => false
+         append_comments_to_tickets => false
+         topics = false
+         sleep_between_runs => 30
+       }
+     }
+
+    output 
+    {
+      if [type] == "organization"
+      {
+        elasticsearch
+        {
+          host => "localhost"
+          port => "9200"
+          index => "zd_orgs"
+          document_type => "%{type}"
+          protocol => "http"
+          document_id => "%{id}"
+          manage_template => false
+          template_name => zd_organizations
+        }
+      }
+       else if [type] == "user"
+      {
+        elasticsearch
+        {
+          host => "localhost"
+          port => "9200"
+          index => "zd_users"
+          document_type => "%{type}"
+          protocol => "http"
+          document_id => "%{id}"
+          manage_template => false
+          template_name => zd_users
+       }   
+      } 
+      else if [type] == "ticket"
+      {    
+        elasticsearch
+        {
+          host => "localhost"
+          port => "9200"
+          index => "zd_tickets"
+          document_type => "%{type}"
+          protocol => "http"
+          document_id => "%{id}"
+          manage_template => false
+          template_name => zd_tickets
+       }   
+      } 
+      else if [type] == "comment"
+      {
+        elasticsearch
+        {
+          host => "localhost"
+          port => "9200"
+          index => "zd_comments"
+          document_type => "%{type}"
+          protocol => "http"
+          document_id => "%{id}"
+          manage_template => false
+          template_name => zd_comments
+        }  
+      }
+      else if [type] == "topic"
+      {
+        elasticsearch
+        {
+          host => "localhost"
+          port => "9200"
+          index => "zd_topics"
+          document_type => "%{type}"
+          protocol => "http"
+          document_id => "%{id}"
+          manage_template => false
+          template_name => zd_topics
+        }  
+      }  
+    }
+ ----------------------------------
 ```
 
 This is a plugin for [Logstash](https://github.com/elastic/logstash).
