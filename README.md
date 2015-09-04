@@ -29,7 +29,7 @@ Disclaimer:  I am not a developer and this is my first Ruby program :)
          tickets_last_updated_n_days_ago => 1
          comments => false
          append_comments_to_tickets => false
-         topics = false
+         topics => false
          sleep_between_runs => 30
        }
      }
