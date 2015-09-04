@@ -33,24 +33,89 @@ require 'zendesk_api'
 #       }
 #     }
 #
-#     output 
-#     {
-#       elasticsearch
-#       {
-#         host => "localhost"
-#         port => "9200"
-#         index => "zendesk"
-#         # Referenced in plugin code. Do not change.
-#         index_type => "%{type}"
-#         # Referenced in plugin code. Do not change.
-#         document_id => "%{id}"
-#         protocol => "http"
-#         manage_template => false
-#         # If using shield with authentication (LS 1.5+)
-#         user => "shield_user"
-#         password => "shield_password"
-#       }
-#     }
+#    output 
+#    {
+# 	   if [type] == "organization"
+# 	   {
+#	     elasticsearch
+#		 {
+#	       host => "localhost"
+#		   port => "9200"
+#		   index => "zd_orgs"
+#		   # Referenced in plugin code. Do not change.
+#		   document_type => "%{type}"
+#		   protocol => "http"
+#		   # Referenced in plugin code. Do not change.
+#		   document_id => "%{id}"
+#		   manage_template => false
+#		   template_name => zendesk_template
+#		 }
+#      }
+#       else if [type] == "user"
+#	   {
+#	     elasticsearch
+#		 {
+#		   host => "localhost"
+#		   port => "9200"
+#		   index => "zd_users"
+#		   # Referenced in plugin code. Do not change.
+#		   document_type => "%{type}"
+#		   protocol => "http"
+#		   # Referenced in plugin code. Do not change.
+#		   document_id => "%{id}"
+#		   manage_template => false
+#		   template_name => zendesk_template
+#		}	
+#	   } 
+#	   else if [type] == "ticket"
+#	   {	
+#	     elasticsearch
+#		 {
+#		   host => "localhost"
+#		   port => "9200"
+#		   index => "zd_tickets"
+#		   # Referenced in plugin code. Do not change.
+#		   document_type => "%{type}"
+#		   protocol => "http"
+#		   # Referenced in plugin code. Do not change.
+#		   document_id => "%{id}"
+#		   manage_template => false
+#		   template_name => zendesk_template
+#		}	
+#	   } 
+#	   else if [type] == "comment"
+#	   {
+#	     elasticsearch
+#		 {
+#	       host => "localhost"
+#		   port => "9200"
+#		   index => "zd_comments"
+#		   # Referenced in plugin code. Do not change.
+#		   document_type => "%{type}"
+#		   protocol => "http"
+#		   # Referenced in plugin code. Do not change.
+#		   document_id => "%{id}"
+#		   manage_template => false
+#		   template_name => zendesk_template
+#		 }	
+#	   }
+#	   else if [type] == "topic"
+#	   {
+#	     elasticsearch
+#		 {
+#	       host => "localhost"
+#		   port => "9200"
+#		   index => "zd_topics"
+#		   # Referenced in plugin code. Do not change.
+#		   document_type => "%{type}"
+#		   protocol => "http"
+#		   # Referenced in plugin code. Do not change.
+#		   document_id => "%{id}"
+#		   manage_template => false
+#		   template_name => zendesk_template
+#		 }	
+#	   }  
+#    }
 # ----------------------------------
 
 class LogStash::Inputs::Zendesk < LogStash::Inputs::Base
