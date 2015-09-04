@@ -49,7 +49,7 @@ Disclaimer:  I am not a developer and this is my first Ruby program :)
 #		   # Referenced in plugin code. Do not change.
 #		   document_id => "%{id}"
 #		   manage_template => false
-#		   template_name => zendesk_template
+#		   template_name => zd_organizations
 #		 }
 #      }
 #       else if [type] == "user"
@@ -65,7 +65,7 @@ Disclaimer:  I am not a developer and this is my first Ruby program :)
 #		   # Referenced in plugin code. Do not change.
 #		   document_id => "%{id}"
 #		   manage_template => false
-#		   template_name => zendesk_template
+#		   template_name => zd_users
 #		}	
 #	   } 
 #	   else if [type] == "ticket"
@@ -81,7 +81,7 @@ Disclaimer:  I am not a developer and this is my first Ruby program :)
 #		   # Referenced in plugin code. Do not change.
 #		   document_id => "%{id}"
 #		   manage_template => false
-#		   template_name => zendesk_template
+#		   template_name => zd_tickets
 #		}	
 #	   } 
 #	   else if [type] == "comment"
@@ -97,7 +97,7 @@ Disclaimer:  I am not a developer and this is my first Ruby program :)
 #		   # Referenced in plugin code. Do not change.
 #		   document_id => "%{id}"
 #		   manage_template => false
-#		   template_name => zendesk_template
+#		   template_name => zd_comments
 #		 }	
 #	   }
 #	   else if [type] == "topic"
@@ -113,7 +113,7 @@ Disclaimer:  I am not a developer and this is my first Ruby program :)
 #		   # Referenced in plugin code. Do not change.
 #		   document_id => "%{id}"
 #		   manage_template => false
-#		   template_name => zendesk_template
+#		   template_name => zd_topics
 #		 }	
 #	   }  
 #    }
