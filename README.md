@@ -99,7 +99,23 @@ Disclaimer:  I am not a developer and this is my first Ruby program :)
 #		   manage_template => false
 #		   template_name => zendesk_template
 #		 }	
-#	   } 
+#	   }
+#	   else if [type] == "topic"
+#	   {
+#	     elasticsearch
+#		 {
+#	       host => "localhost"
+#		   port => "9200"
+#		   index => "zd_topics"
+#		   # Referenced in plugin code. Do not change.
+#		   document_type => "%{type}"
+#		   # Referenced in plugin code. Do not change.
+#		   protocol => "http"
+#		   document_id => "%{id}"
+#		   manage_template => false
+#		   template_name => zendesk_template
+#		 }	
+#	   }  
 #    }
 # ----------------------------------
 ```
