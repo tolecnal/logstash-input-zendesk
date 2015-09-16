@@ -7,7 +7,7 @@ It assumes that the user specified has the appropriate Zendesk permissions to ac
 
 Just sharing what I have been using and I hope it helps other folks get started.
 
-Disclaimer:  I am not a developer and this is my first Ruby program :)
+Disclaimer:  This is my first Ruby program :)
 
 ```
  Sample configuration:
@@ -111,6 +111,8 @@ Disclaimer:  I am not a developer and this is my first Ruby program :)
 ```
 
 This is a plugin for [Logstash](https://github.com/elastic/logstash).
+
+To build, see Logstash documentation [here](https://www.elastic.co/guide/en/logstash/current/_how_to_write_a_logstash_input_plugin.html#_build).
 
 It is fully free and fully open source. The license is Apache 2.0, meaning you are pretty much free to use it however you want in whatever way.
 
