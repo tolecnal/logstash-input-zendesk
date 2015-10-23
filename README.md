@@ -2,7 +2,7 @@
 
 This input fetches data from Zendesk and generates Logstash events for indexing into Elasticsearch.
 It uses the official Zendesk ruby client api (https://github.com/zendesk/zendesk_api_client_rb).  
-Currently, the input supports organization, user, ticket, ticket comment and forum object types.  
+Currently, the input supports organization, user, ticket, ticket comment and topic object types.  
 It assumes that the user specified has the appropriate Zendesk permissions to access the fetched objects.
 
 Just sharing what I have been using and I hope it helps other folks get started.
@@ -36,76 +36,17 @@ Disclaimer:  This is my first Ruby program :)
 
     output 
     {
-      if [type] == "organization"
-      {
-        elasticsearch
+    	elasticsearch
         {
           host => "localhost"
           port => "9200"
-          index => "zd_orgs"
+          index => "zd_%{type}"
           document_type => "%{type}"
           protocol => "http"
           document_id => "%{id}"
           manage_template => false
-          template_name => zd_organizations
+          template_name => "zd_%{type}"
         }
-      }
-       else if [type] == "user"
-      {
-        elasticsearch
-        {
-          host => "localhost"
-          port => "9200"
-          index => "zd_users"
-          document_type => "%{type}"
-          protocol => "http"
-          document_id => "%{id}"
-          manage_template => false
-          template_name => zd_users
-       }   
-      } 
-      else if [type] == "ticket"
-      {    
-        elasticsearch
-        {
-          host => "localhost"
-          port => "9200"
-          index => "zd_tickets"
-          document_type => "%{type}"
-          protocol => "http"
-          document_id => "%{id}"
-          manage_template => false
-          template_name => zd_tickets
-       }   
-      } 
-      else if [type] == "comment"
-      {
-        elasticsearch
-        {
-          host => "localhost"
-          port => "9200"
-          index => "zd_comments"
-          document_type => "%{type}"
-          protocol => "http"
-          document_id => "%{id}"
-          manage_template => false
-          template_name => zd_comments
-        }  
-      }
-      else if [type] == "topic"
-      {
-        elasticsearch
-        {
-          host => "localhost"
-          port => "9200"
-          index => "zd_topics"
-          document_type => "%{type}"
-          protocol => "http"
-          document_id => "%{id}"
-          manage_template => false
-          template_name => zd_topics
-        }  
-      }  
     }
  ----------------------------------
 ```

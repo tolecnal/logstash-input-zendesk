@@ -1,0 +1,52 @@
+{
+    "template": "zd_topic",
+    "settings": {
+    	"number_of_shards": 1,
+    	"number_of_replicas": 0,
+    	"index.mapping.coerce":true
+    },
+    "mappings": {
+        "user": {
+			"dynamic_templates": [
+               {
+                  "string_fields": {
+                     "mapping": {
+                        "index": "analyzed",
+                        "omit_norms": true,
+                        "type": "string",
+                        "fields": {
+                           "raw": {
+                              "index": "not_analyzed",
+                              "ignore_above": 256,
+                              "type": "string",
+                              "doc_values": true
+                           }
+                        }
+                     },
+                     "match": "*",
+                     "match_mapping_type": "string"
+                  }
+               },
+               {
+               "other_fields": {
+                 "mapping": {
+                 "doc_values": true
+                 },
+                 "match_mapping_type": "*",
+                 "match": "*"
+               }
+               }
+            ],
+            "properties": {
+        "created_at":{
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss z||dateOptionalTime||yyyy-MM-dd HH:mm:ss Z"
+        },
+        "updated_at":{
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss z||dateOptionalTime||yyyy-MM-dd HH:mm:ss Z"
+        }        
+            }
+        }
+    }
+}
