@@ -40,11 +40,13 @@
             "properties": {
         "created_at":{
           "type": "date",
-          "format": "yyyy-MM-dd HH:mm:ss z||dateOptionalTime||yyyy-MM-dd HH:mm:ss Z"
+          "format": "yyyy-MM-dd HH:mm:ss z||dateOptionalTime||yyyy-MM-dd HH:mm:ss Z",
+          "doc_values": true
         },
         "updated_at":{
           "type": "date",
-          "format": "yyyy-MM-dd HH:mm:ss z||dateOptionalTime||yyyy-MM-dd HH:mm:ss Z"
+          "format": "yyyy-MM-dd HH:mm:ss z||dateOptionalTime||yyyy-MM-dd HH:mm:ss Z",
+          "doc_values": true
         }        
             }
         }
