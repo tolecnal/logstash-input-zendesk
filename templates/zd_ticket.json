@@ -24,7 +24,7 @@
                         }
                      },
                      "match": "*",
-		     "unmatch": "comments",
+		             "unmatch": "comments",
                      "match_mapping_type": "string"
                   }
                },
@@ -34,7 +34,8 @@
                  "doc_values": true
                  },
                  "match_mapping_type": "*",
-                 "match": "*"
+                 "match": "*",
+                 "unmatch": "comments"
                }
                }
             ],
