@@ -51,7 +51,7 @@ Disclaimer:  This is my first Ruby program :)
 
 This is a plugin for [Logstash](https://github.com/elastic/logstash).
 
-To build, see Logstash documentation [here](https://www.elastic.co/guide/en/logstash/current/_how_to_write_a_logstash_input_plugin.html#_build).
+To build, see Logstash documentation [here](https://www.elastic.co/guide/en/logstash/current/_how_to_write_a_logstash_input_plugin.html#_build).  In short, clone the repository, build the gem, and install the gem using the Logstash plugin command.
 
 It is fully free and fully open source. The license is Apache 2.0, meaning you are pretty much free to use it however you want in whatever way.
 
