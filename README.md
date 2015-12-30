@@ -4,6 +4,7 @@ This input fetches data from Zendesk and generates Logstash events for indexing 
 It uses the official Zendesk ruby client api (https://github.com/zendesk/zendesk_api_client_rb).  
 Currently, the input supports organization, user, ticket, ticket comment and topic object types.  
 It assumes that the user specified has the appropriate Zendesk permissions to access the fetched objects.
+Don't forget to apply the index templates from the templates folder to Elasticsearch before running the plugin.
 
 Just sharing what I have been using and I hope it helps other folks get started.
 
