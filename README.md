@@ -38,11 +38,8 @@ Disclaimer:  This is my first Ruby program :)
     {
     	elasticsearch
         {
-          host => "localhost"
-          port => "9200"
           index => "zd_%{type}"
           document_type => "%{type}"
-          protocol => "http"
           document_id => "%{id}"
           manage_template => false
           template_name => "zd_%{type}"
