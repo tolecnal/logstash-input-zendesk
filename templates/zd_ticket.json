@@ -51,59 +51,46 @@
           "doc_values": true
         },
                 "first_reply_time_in_minutes": {
-                    "type": "integer",
-                    "term_statistics": true
+                    "type": "integer"
                 },
                 "full_resolution_time_in_minutes_within_business_hours": {
-                    "type": "integer",
-                    "term_statistics": true
+                    "type": "integer"
                 },
                 "first_resolution_time_in_minutes_within_business_hours": {
-                    "type": "integer",
-                    "term_statistics": true
+                    "type": "integer"
                 },
                 "agent_wait_time_in_minutes_within_business_hours": {
-                    "type": "integer",
-                    "term_statistics": true
+                    "type": "integer"
                 },
                 "on_hold_time_in_minutes_within_business_hours": {
-                    "type": "integer",
-                    "term_statistics": true
+                    "type": "integer"
                 },
                 "full_resolution_time_in_minutes": {
-                    "type": "integer",
-                    "term_statistics": true
+                    "type": "integer"
                 },
                 "first_resolution_time_in_minutes": {
-                    "type": "integer",
-                    "term_statistics": true
+                    "type": "integer"
                 },
                 "agent_wait_time_in_minutes": {
-                    "type": "integer",
-                    "term_statistics": true
+                    "type": "integer"
                 },
                 "requester_wait_time_in_minutes_within_business_hours": {
-                    "type": "integer",
-                    "term_statistics": true
+                    "type": "integer"
                 },
                 "initially_assigned_at": {
                     "type": "date"
                 },
                 "first_reply_time_in_minutes_within_business_hours": {
-                    "type": "integer",
-                    "term_statistics": true
+                    "type": "integer"
                 },
                 "on_hold_time_in_minutes": {
-                    "type": "integer",
-                    "term_statistics": true
+                    "type": "integer"
                 },
                 "requester_wait_time_in_minutes": {
-                    "type": "integer",
-                    "term_statistics": true
+                    "type": "integer"
                 },
                 "resolution_time": {
-                    "type": "integer",
-                    "term_statistics": true
+                    "type": "integer"
                 }                         
             }
         }
