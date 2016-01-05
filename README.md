@@ -49,6 +49,8 @@ Disclaimer:  This is my first Ruby program :)
  ----------------------------------
 ```
 
+See comments in code for descriptions of the parameters above.
+
 This is a plugin for [Logstash](https://github.com/elastic/logstash).
 
 To build, see Logstash documentation [here](https://www.elastic.co/guide/en/logstash/current/_how_to_write_a_logstash_input_plugin.html#_build).  In short, clone the repository, build the gem, and install the gem using the Logstash plugin command.
